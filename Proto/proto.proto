@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package grpc;
+
+option go_package = ".";
+
+service MyService {
+    rpc MyMethod(RequestMessage) returns (ResponseMessage);
+}
+
+message RequestMessage {
+    string ID = 1;
+    int32 AT = 2;
+    int32 MP = 3;
+}
+
+message ResponseMessage {
+    bool Respuesta = 1;
+}
